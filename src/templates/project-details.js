@@ -1,7 +1,8 @@
 import React from "react"
 import Img from "gatsby-image"
-import Layout from "./components/Layout"
-import * as styles from './styles/project-details.module.css'
+import { graphql } from "gatsby"
+import * as Styles from '../styles/project-details.module.css'
+import Layout from "../components/Layout"
 
 export default function ProjectDetails({ data }) {
   const { html } = data.markdownRemark
@@ -9,13 +10,13 @@ export default function ProjectDetails({ data }) {
 
   return (
     <Layout>
-      <div className={styles.details}>
+      <div className={Styles.details}>
         <h2>{title}</h2>
         <h3>{stack}</h3>
-        <div className={styles.featured}>
+        <div className={Styles.featured}>
           <Img fluid={featuredImg.childImageSharp.fluid} />
         </div>
-        <div className={styles.html} dangerouslySetInnerHTML={{ __html: html }} />
+        <div className={Styles.html} dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
   )

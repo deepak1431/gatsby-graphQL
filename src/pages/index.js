@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from 'gatsby'
 import Layout from "../components/Layout"
-import * as styles from '../styles/home.module.css'
+import Style from '../styles/home.module.css'
 import Img from "gatsby-image"
 
 export default function Home({ data }) {
@@ -9,12 +9,13 @@ export default function Home({ data }) {
   
   return (
     <Layout>
-      <section className={styles.header}>
+      <section style={{ display: "grid",gridTemplateColumns: "1fr 1fr",gridGap: "40px",alignItems:" center"}}> 
         <div>
           <h2>Design</h2>
           <h3>Develop & Deploy</h3>
           <p>UX designer & web developer based in Manchester.</p>
-          <Link className={styles.btn} to="/projects">My Portfolio Projects</Link>
+          <Link to="/projects" style={{ display: "inline-block",background: "#d42990",padding: "10px 16px", borderRadius: "10px",marginTop: "20px",
+    fontWeight: "500"  }}>My Portfolio Projects</Link>
         </div>
         <Img fluid={data.file.childImageSharp.fluid} />
       </section>
