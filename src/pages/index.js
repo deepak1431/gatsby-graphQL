@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from 'gatsby'
 import Layout from "../components/Layout"
-import Style from '../styles/home.module.css'
+import style from '../styles/home.module.css'
 import Img from "gatsby-image"
 
 export default function Home({ data }) {
