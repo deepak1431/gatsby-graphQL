@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import * as Style from '../../styles/projects.module.css'
+import * as style from '../../styles/projects.module.css'
 import { Link, graphql } from 'gatsby'
 import Img from "gatsby-image"
 
@@ -12,12 +12,12 @@ export default function Projects({ data }) {
   return (
     <Layout>
       <div 
-      className={Style.portfolio}
+      className={style.portfolio}
       >
         <h2>Portfolio</h2>
         <h3>Projects & Websites I've Created</h3>
         <div
-         className={Style.projects}
+         className={style.projects}
          >
           {projects.map(project => (
             <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
@@ -29,7 +29,7 @@ export default function Projects({ data }) {
             </Link>
           ))}
         </div>
-        <p>Likewhat you see? email me at {contact} for a quote!</p>
+        <p>Email me at {contact} for a quote!</p>
       </div>
     </Layout>
   );
